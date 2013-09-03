@@ -1,3 +1,7 @@
+## 1.0.3:
+
+* Re-enabled CopperEgg
+
 ## 1.0.2:
 
 * Temporarily disabled copperegg because their API is not working and this is blocking chef runs.
