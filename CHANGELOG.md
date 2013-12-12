@@ -1,3 +1,7 @@
+## 1.1.0:
+
+* Add Datadog
+
 ## 1.0.3:
 
 * Re-enabled CopperEgg

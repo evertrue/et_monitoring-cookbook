@@ -8,5 +8,4 @@ version          '1.1.0'
 
 depends 'copperegg'
 depends 'newrelic'
-depends 'chef_handler'
 depends 'et_datadog', '= 1.0.1'
