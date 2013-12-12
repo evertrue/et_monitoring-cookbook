@@ -5,3 +5,5 @@ include_recipe "copperegg"
 
 include_recipe "newrelic::repository"
 include_recipe "newrelic::server-monitor"
+
+include_recipe "et_datadog"
