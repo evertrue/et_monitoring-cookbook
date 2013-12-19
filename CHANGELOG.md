@@ -1,3 +1,7 @@
+## 1.3.0:
+
+* Determine whether or not to install New Relic server monitoring based on an attribute
+
 ## 1.2.0:
 
 * Use newrelic-ng instead of newrelic
