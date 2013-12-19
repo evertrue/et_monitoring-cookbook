@@ -1,3 +1,7 @@
+## 1.4.1:
+
+* Use copperegg ~> 0.2.3 to fix idempotency; i.e., the collector re-installing every chef run
+
 ## 1.4.0:
 
 * Undo previous version; always install NR server monitoring (turns out, it’s free)
