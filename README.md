@@ -10,7 +10,7 @@ Include the `et_monitoring::agent` recipe.
 
 # Attributes
 
-* `node['et_monitoring']['newrelic_enabled']` If overridden in another cookbook, enables server monitoring via New Relic.
+None specific to this cookbook; all are setting existing attributes from other cookbooks.
 
 # Recipes
 
@@ -22,8 +22,7 @@ Empty
 
 1. Collects necessary API keys
 2. Assigns them to attributes
-3. Includes the `copperegg::default` recipe
-4. Includes the `newrelic-ng::default` if `node['et_monitoring']['newrelic_enabled']` is true
+3. Includes the copperegg and newrelic-ng default recipes
 
 # Author
 

@@ -14,10 +14,6 @@ node.set['copperegg']['apikey'] = api_keys['copperegg']
 
 include_recipe 'copperegg'
 
-# Only install & enable the New Relic server monitor if desired
-# Is overridden in other cookbooks
-if node['et_monitoring']['newrelic_enabled']
-  include_recipe 'newrelic-ng'
-end
+include_recipe 'newrelic-ng'
 
 include_recipe 'et_datadog'
