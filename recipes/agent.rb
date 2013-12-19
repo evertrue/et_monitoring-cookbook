@@ -1,9 +1,18 @@
-node.set['newrelic']['server_monitoring']['license'] = Chef::EncryptedDataBagItem.load("secrets","api_keys")["newrelic"]
-node.set['copperegg']['apikey'] = Chef::EncryptedDataBagItem.load("secrets","api_keys")["copperegg"]
+#
+# Cookbook Name:: et_monitoring
+# Recipe:: agent
+#
+# Copyright (C) 2013 EverTrue, Inc.
+#
+# All rights reserved - Do Not Redistribute
+#
 
-include_recipe "copperegg"
+node.set['newrelic']['server_monitoring']['license'] = Chef::EncryptedDataBagItem.load('secrets', 'api_keys')['newrelic']
+node.set['copperegg']['apikey'] = Chef::EncryptedDataBagItem.load('secrets', 'api_keys')['copperegg']
 
-include_recipe "newrelic::repository"
-include_recipe "newrelic::server-monitor"
+include_recipe 'copperegg'
 
-include_recipe "et_datadog"
+include_recipe 'newrelic::repository'
+include_recipe 'newrelic::server-monitor'
+
+include_recipe 'et_datadog'
