@@ -1,3 +1,7 @@
+## 1.5.1:
+
+* Remove all trace of CopperEgg from cookbook
+
 ## 1.5.0:
 
 * Uninstall CopperEgg monitoring
