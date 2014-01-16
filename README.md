@@ -1,6 +1,6 @@
 # et_monitoring cookbook
 
-Installs basic New Relic & CopperEgg server monitoring.
+Installs basic New Relic server monitoring.
 
 # Requirements
 
@@ -22,7 +22,7 @@ Empty
 
 1. Collects necessary API keys
 2. Assigns them to attributes
-3. Includes the copperegg and newrelic-ng default recipes
+3. Includes the newrelic-ng default recipe
 
 # Author
 
