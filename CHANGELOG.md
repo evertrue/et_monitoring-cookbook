@@ -1,3 +1,7 @@
+## 1.5.0:
+
+* Uninstall CopperEgg monitoring
+
 ## 1.4.1:
 
 * Use copperegg ~> 0.2.3 to fix idempotency; i.e., the collector re-installing every chef run

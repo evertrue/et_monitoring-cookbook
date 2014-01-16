@@ -12,7 +12,7 @@ api_keys = Chef::EncryptedDataBagItem.load('secrets', 'api_keys')
 node.set['newrelic-ng']['license_key'] = api_keys['newrelic']
 node.set['copperegg']['apikey'] = api_keys['copperegg']
 
-include_recipe 'copperegg'
+include_recipe 'copperegg::uninstall'
 
 include_recipe 'newrelic-ng'
 
