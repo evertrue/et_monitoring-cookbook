@@ -1,3 +1,8 @@
+## 1.6.0:
+
+* Add server mode
+* Add test-kitchen
+
 ## 1.5.1:
 
 * Remove all trace of CopperEgg from cookbook
