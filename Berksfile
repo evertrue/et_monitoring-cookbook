@@ -1,4 +1,8 @@
-chef_api :config
-site :opscode
+source 'https://bersk.evertrue.com'
+source 'https://api.berkshelf.com'
 
 metadata
+
+group :integration do
+  cookbook 'shinken', path: '../shinken'
+end

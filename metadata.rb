@@ -8,3 +8,4 @@ version          '1.5.1'
 
 depends 'newrelic-ng', '~> 0.4.0'
 depends 'et_datadog', '= 1.0.1'
+depends 'shinken', '= 1.0.1'
