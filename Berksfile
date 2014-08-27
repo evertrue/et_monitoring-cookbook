@@ -1,4 +1,4 @@
-source 'https://bersk.evertrue.com'
+source 'https://berks.evertrue.com'
 source 'https://api.berkshelf.com'
 
 metadata
