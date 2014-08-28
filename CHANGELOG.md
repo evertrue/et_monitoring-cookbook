@@ -1,3 +1,7 @@
+## 1.8.0:
+
+* Remove datadog
+
 ## 1.7.0:
 
 * Split monitor server out to its own cookbook
