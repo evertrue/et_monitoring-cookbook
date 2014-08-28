@@ -1,3 +1,7 @@
+## 1.7.0:
+
+* Split monitor server out to its own cookbook
+
 ## 1.6.0:
 
 * Add server mode
