@@ -7,4 +7,3 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.7.0'
 
 depends 'newrelic-ng', '~> 0.4.0'
-depends 'et_datadog', '= 1.0.1'
