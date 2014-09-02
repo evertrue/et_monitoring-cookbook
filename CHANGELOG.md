@@ -1,3 +1,8 @@
+## 1.8.1:
+
+* Add et_datadog cookbook back, with modifications to remove the Datadog agent from all nodes upon convergence
+    - Properly removes datadog
+
 ## 1.8.0:
 
 * Remove datadog
