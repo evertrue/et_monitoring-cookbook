@@ -1,3 +1,7 @@
+## 2.0.0:
+
+* Switch to newrelic cookbook in favor of newrelic-ng
+
 ## 1.8.1:
 
 * Add et_datadog cookbook back, with modifications to remove the Datadog agent from all nodes upon convergence
