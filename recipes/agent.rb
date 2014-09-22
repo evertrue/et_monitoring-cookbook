@@ -10,7 +10,7 @@
 api_keys = Chef::EncryptedDataBagItem.load('secrets', 'api_keys')
 
 node.set['newrelic']['license'] = api_keys['newrelic']
-node.ser['newrelic']['server_monitoring']['license'] = api_keys['newrelic']
+node.set['newrelic']['server_monitoring']['license'] = api_keys['newrelic']
 
 include_recipe 'newrelic'
 include_recipe 'et_datadog'
