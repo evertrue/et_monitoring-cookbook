@@ -1,3 +1,7 @@
+## 2.0.1:
+
+* Fix newrelic attribute setting for license
+
 ## 2.0.0:
 
 * Switch to newrelic cookbook in favor of newrelic-ng
