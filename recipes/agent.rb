@@ -13,4 +13,3 @@ node.set['newrelic']['license'] = api_keys['newrelic']
 node.set['newrelic']['server_monitoring']['license'] = api_keys['newrelic']
 
 include_recipe 'newrelic'
-include_recipe 'et_datadog'
