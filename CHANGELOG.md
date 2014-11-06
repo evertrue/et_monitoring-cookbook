@@ -1,3 +1,8 @@
+## 2.0.3:
+
+* Fix another typo (in the CHANGELOG this time)
+* Remove et_datadog
+
 ## 2.0.2:
 
 * Fix typo
