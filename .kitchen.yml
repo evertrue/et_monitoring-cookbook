@@ -9,7 +9,7 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: client
+  - name: agent
     run_list:
-      - recipe[et_monitoring::default]
+      - recipe[et_monitoring::agent]
     attributes:
