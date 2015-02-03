@@ -7,9 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-api_keys = Chef::EncryptedDataBagItem.load('secrets', 'api_keys')
-
-node.set['newrelic']['license'] = api_keys['newrelic']
-node.set['newrelic']['server_monitoring']['license'] = api_keys['newrelic']
+unless node['et_monitoring']['mock']
+  node.set['newrelic']['license'] = data_bag_item('secrets', 'api_keys')['newrelic']
+end
 
 include_recipe 'newrelic'
