@@ -1,3 +1,11 @@
+# et_monitoring CHANGELOG
+
+## 2.1.0:
+
+* Add real Test Kitchen testing of NR server monitoring installation
+* Clean up unnecessary files
+* Test on Ubuntu 14.04
+
 ## 2.0.3:
 
 * Fix another typo (in the CHANGELOG this time)
