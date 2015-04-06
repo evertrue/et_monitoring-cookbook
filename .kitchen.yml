@@ -13,10 +13,7 @@ suites:
     run_list:
       - recipe[et_monitoring::agent]
     attributes:
-      et_monitoring:
-        mock: true
       newrelic:
-        license: TESTKEY_SERVER_AGENT
         server_monitor_agent:
           service_notify_action: nothing
           service_actions:

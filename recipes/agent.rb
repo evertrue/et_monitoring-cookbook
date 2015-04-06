@@ -7,8 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-unless node['et_monitoring']['mock']
-  node.set['newrelic']['license'] = data_bag_item('secrets', 'api_keys')['newrelic']
-end
+node.set['newrelic']['license'] = data_bag_item('secrets', 'api_keys')['newrelic']
 
 include_recipe 'newrelic'
