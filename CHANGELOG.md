@@ -1,5 +1,12 @@
 # et_monitoring CHANGELOG
 
+## 2.1.1:
+
+* add et_cloudwatch monitoring suite
+* Test in EC2 and use the "dev" environment name
+* Actually test setting of license key via data bag
+* Rename test to correlate with its recipe
+
 ## 2.1.0:
 
 * Add real Test Kitchen testing of NR server monitoring installation
