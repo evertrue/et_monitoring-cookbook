@@ -4,6 +4,8 @@ driver:
 
 provisioner:
   name: chef_zero
+  client_rb:
+    environment: dev
 
 platforms:
   - name: ubuntu-14.04

@@ -1,0 +1,35 @@
+---
+driver:
+  name: ec2
+  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY'] %>
+  aws_secret_access_key: <%= ENV['AWS_SECRET_KEY'] %>
+  aws_ssh_key_id: <%= ENV['AWS_SSH_KEY'] %>
+  ssh_key: <%= ENV['HOME'] %>/.ssh/<%= ENV['AWS_SSH_KEY'] %>.pem
+  region: us-east-1
+  availability_zone: us-east-1b
+  security_group_ids: ['ci-testing']
+  flavor_id: c3.xlarge
+  username: ubuntu
+  iam_profile_name: test-et-cloudwatch
+
+provisioner:
+  name: chef_zero
+  client_rb:
+    environment: dev
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      username: ubuntu
+      image_id: ami-10849178
+
+suites:
+  - name: cloud-agent
+    run_list:
+      - recipe[et_monitoring::aws]
+    attributes:
+      newrelic:
+        server_monitor_agent:
+          service_notify_action: nothing
+          service_actions:
+            - enable
