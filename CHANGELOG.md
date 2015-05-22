@@ -1,5 +1,9 @@
 # et_monitoring CHANGELOG
 
+## 2.1.2:
+
+* Define empty cloudwatch_alarms hash
+
 ## 2.1.1:
 
 * add et_cloudwatch monitoring suite
