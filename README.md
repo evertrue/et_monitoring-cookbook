@@ -1,16 +1,16 @@
 # et_monitoring cookbook
 
-Installs basic New Relic server monitoring.
+Installs basic server monitoring.
 
 # Requirements
 
 # Usage
 
-Include the `et_monitoring::agent` recipe.
+Include the `et_monitoring::agent` recipe and/or the `et_monitoring::aws` recipe.
 
 # Attributes
 
-None specific to this cookbook; all are setting existing attributes from other cookbooks.
+`cloudwatch_alarms` - A hash of hashes defining CloudWatch alarms to be sent to the `et_cloudwatch_alarm` resource.
 
 # Recipes
 
@@ -23,6 +23,10 @@ Empty
 1. Collects necessary API keys
 2. Assigns them to attributes
 3. Includes the newrelic-ng default recipe
+
+## aws
+
+Sets up CloudWatch alarms according to the `node['cloudwatch_alarms']` hash.
 
 # Author
 
