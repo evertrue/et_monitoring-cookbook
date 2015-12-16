@@ -8,3 +8,4 @@ version          '2.1.2'
 
 depends 'newrelic',   '~> 2.0'
 depends 'et_cloudwatch', '~> 1.0'
+depends 'threatstack', '~> 1.0'
