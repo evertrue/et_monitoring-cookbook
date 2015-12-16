@@ -1,16 +1,15 @@
 ---
 driver:
   name: ec2
-  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY'] %>
-  aws_secret_access_key: <%= ENV['AWS_SECRET_KEY'] %>
   aws_ssh_key_id: <%= ENV['AWS_SSH_KEY'] %>
-  ssh_key: <%= ENV['HOME'] %>/.ssh/<%= ENV['AWS_SSH_KEY'] %>.pem
   region: us-east-1
   availability_zone: us-east-1b
   security_group_ids: ['ci-testing']
-  flavor_id: c3.xlarge
-  username: ubuntu
+  instance_type: c3.xlarge
   iam_profile_name: test-et-cloudwatch
+
+transport:
+  ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
 
 provisioner:
   name: chef_zero
@@ -20,7 +19,6 @@ provisioner:
 platforms:
   - name: ubuntu-14.04
     driver:
-      username: ubuntu
       image_id: ami-10849178
 
 suites:
