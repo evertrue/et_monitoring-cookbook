@@ -8,6 +8,9 @@ driver:
     - ci-testing
   instance_type: c3.xlarge
   iam_profile_name: test-et-cloudwatch
+  tags:
+    Env: public
+    Type: test
 
 transport:
   ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
@@ -24,6 +27,9 @@ platforms:
 
 suites:
   - name: agent
+    driver:
+      tags:
+        Name: et_monitoring-agent-ubuntu-1404
     run_list:
       - recipe[et_monitoring::agent]
     attributes:
