@@ -19,7 +19,7 @@ provisioner:
 platforms:
   - name: ubuntu-14.04
     driver:
-      image_id: ami-10849178
+      image_id: ami-9883c6f2
 
 suites:
   - name: cloud-agent
