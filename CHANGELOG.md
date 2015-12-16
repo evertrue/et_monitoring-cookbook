@@ -1,5 +1,9 @@
 # et_monitoring CHANGELOG
 
+## 2.2.1:
+
+* Fix setting of node attribute in `et_monitoring::threatstack`
+
 ## 2.2.0:
 
 * Add optional installation of Threat Stack agent
