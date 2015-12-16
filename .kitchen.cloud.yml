@@ -4,7 +4,8 @@ driver:
   aws_ssh_key_id: <%= ENV['AWS_SSH_KEY'] %>
   region: us-east-1
   availability_zone: us-east-1b
-  security_group_ids: ['ci-testing']
+  security_group_ids:
+    - ci-testing
   instance_type: c3.xlarge
   iam_profile_name: test-et-cloudwatch
 
