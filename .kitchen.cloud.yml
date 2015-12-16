@@ -22,9 +22,9 @@ platforms:
       image_id: ami-9883c6f2
 
 suites:
-  - name: cloud-agent
+  - name: agent
     run_list:
-      - recipe[et_monitoring::aws]
+      - recipe[et_monitoring::agent]
     attributes:
       newrelic:
         server_monitor_agent:
