@@ -1,3 +1,12 @@
+#
+# Cookbook Name:: et_monitoring
+# Recipe:: aws
+#
+# Copyright (C) 2015 EverTrue, Inc.
+#
+# All rights reserved - Do Not Redistribute
+#
+
 creds = data_bag_item('secrets', 'aws_credentials')['EtCloudWatchAlerts']
 
 node['cloudwatch_alarms'].each do |name, conf|
