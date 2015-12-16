@@ -1,5 +1,11 @@
 # et_monitoring CHANGELOG
 
+## 2.2.0:
+
+* Add optional installation of Threat Stack agent
+* Clean up Kitchen testing for `et_monitoring::agent`
+    - Drop dupe stuff, misnamed suites etc.
+
 ## 2.1.2:
 
 * Define empty cloudwatch_alarms hash
