@@ -1,0 +1,1 @@
+default['cloudwatch_alarms'] = {}
