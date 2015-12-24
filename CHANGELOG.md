@@ -1,5 +1,9 @@
 # et_monitoring CHANGELOG
 
+## 2.2.2:
+
+* Set empty default hash for `cloudwatch_alarms`
+
 ## 2.2.1:
 
 * Fix setting of node attribute in `et_monitoring::threatstack`
