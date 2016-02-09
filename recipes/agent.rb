@@ -12,6 +12,7 @@ node.set['newrelic']['license'] = data_bag_item('secrets', 'api_keys')['newrelic
 include_recipe 'newrelic'
 include_recipe 'et_monitoring::threatstack' if node['et_monitoring']['threatstack_enabled']
 include_recipe 'et_monitoring::snmpd'
+include_recipe 'et_monitoring::datadog' if node['et_monitoring']['datadog_enabled']
 
 # Ensure New Relic can monitor Docker containers, if it is installed
 service 'newrelic-sysmond' do
