@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'et_monitoring::snmp' do
+describe 'et_monitoring::snmpd' do
   describe service('snmpd') do
     it { is_expected.to be_enabled }
     it { is_expected.to be_running }
