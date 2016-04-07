@@ -1,5 +1,9 @@
 # et_monitoring CHANGELOG
 
+## 2.2.3:
+
+* Add snmpd
+
 ## 2.2.2:
 
 * Set empty default hash for `cloudwatch_alarms`
