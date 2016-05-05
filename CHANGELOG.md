@@ -1,5 +1,10 @@
 # et_monitoring CHANGELOG
 
+## 2.3.0:
+
+* Update New Relic Server Agent user to belong to `docker` user group if it exists
+    - Ensures any instance that has Docker installed can monitor its containers in NR
+
 ## 2.2.3:
 
 * Add snmpd
