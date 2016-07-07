@@ -1,0 +1,34 @@
+language: ruby
+rvm:
+- 2.2
+cache:
+  directories:
+  - "$HOME/.berkshelf"
+addons:
+  apt:
+    sources:
+    - chef-stable-precise
+    packages:
+    - chefdk
+before_install:
+- openssl aes-256-cbc -K $encrypted_1c4d9594b5d2_key -iv $encrypted_1c4d9594b5d2_iv
+  -in travis_ci_ec2.pem.enc -out ~/.ssh/travis_ci_ec2.pem -d
+install:
+- eval "$(chef shell-init bash)"
+- chef gem install kitchen-ec2 kitchen-sync coveralls
+before_script:
+- berks
+- chef --version
+- cookstyle --version
+- foodcritic --version
+script:
+- cookstyle
+- foodcritic .
+- kitchen test -d always
+env:
+  global:
+  - secure: YKe8Dxq+5+wuvuqlnaGprcvZbtdo8cmQsVUZ7unOmWpXpxMR2oqmp6FP6xcYKJ8nLvgc4ZHB2Mh66m+Pq1seLXrJr44KQMRd5H9oC3/kHi4dpVE/Poltu+aw63VmUnJ8DAwF2Ks4KHYB6yHMDrb9Nl5FzQnKhYrz3WPM0GXTKmE=
+  - secure: Df5bZx7M+X6T/jSOJxVgU4yM4cmC49vLd5P8hhPr3k+i9iEvK1a3Y8qiYfNEQx8BCNCbY6wiXOyxpAfItB3fU5p/MU/zQsuBEoOSXsT98Q33RXCDmT1jw1+oUig5uCCNfZaQqrtpDdsPblGx8UGukj9Od097QPimj3zbMg2+Zdc=
+notifications:
+  slack:
+    secure: FSEfUoRktT3vUR29dsoSGy4YjcIUsxiplEIDlyCFGFv5Mqic4DdA107Oks1rLqN2HKdPcMrRhDIqkBJtIAgIsUZK48aaOEyqu5dKCw2Hcs2RIO/n6uNBsi2ZdlStFv/cTtTJ9soFUlzuDSPMQhsli/ZQE0gfdTBxPvGxx9HmwGo=
