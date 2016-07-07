@@ -1,5 +1,11 @@
 # et_monitoring CHANGELOG
 
+## 2.4.0:
+
+* Add `datadog` recipe for install & configuration of Datadog Agent & integrations (#6)
+* Clean up `snmpd` tests (#5)
+* Add testing usin Travis CI (#7)
+
 ## 2.3.0:
 
 * Update New Relic Server Agent user to belong to `docker` user group if it exists
