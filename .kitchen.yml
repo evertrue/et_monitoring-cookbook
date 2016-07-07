@@ -31,9 +31,20 @@ suites:
         Name: et_monitoring-agent-ubuntu-1404
     run_list:
       - recipe[et_monitoring::agent]
+      - recipe[et_monitoring::datadog]
     attributes:
       newrelic:
         server_monitor_agent:
           service_notify_action: nothing
           service_actions:
             - enable
+      et_monitoring:
+        datadog:
+          kafka:
+            instances:
+              - host: localhost
+                port: 19092
+                java_bin_path: /usr/bin/java
+                tags:
+                  - kafka:dev
+                  - env:dev
