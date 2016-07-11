@@ -6,9 +6,8 @@
 
 datadog_creds = data_bag_item('secrets', 'api_keys')['datadog']
 
-node.set['datadog']['api_key']         = datadog_creds['api_key']
-node.set['datadog']['application_key'] = datadog_creds['application_keys']['chef_agent']
-node.set['datadog']['agent_version']   = '1:5.8.0-1'
+node.default['datadog']['api_key']         = datadog_creds['api_key']
+node.default['datadog']['application_key'] = datadog_creds['application_keys']['chef_agent']
 
 include_recipe 'datadog::dd-agent'
 include_recipe 'datadog::dd-handler'
