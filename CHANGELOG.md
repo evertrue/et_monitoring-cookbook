@@ -1,5 +1,10 @@
 # et_monitoring CHANGELOG
 
+## 2.4.1:
+
+* Avoid `normal` level attribute precedence for Datadog attributes
+* Install Datadog Agent v5.8.4
+
 ## 2.4.0:
 
 * Add `datadog` recipe for install & configuration of Datadog Agent & integrations (#6)
