@@ -1,5 +1,9 @@
 # et_monitoring CHANGELOG
 
+## 3.0.0:
+
+* Run datadog as part of agent but only if there are attributes defined
+
 ## 2.4.1:
 
 * Avoid `normal` level attribute precedence for Datadog attributes
