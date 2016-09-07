@@ -1,5 +1,11 @@
 # et_monitoring CHANGELOG
 
+## 3.0.1:
+
+* Switch to using a test cookbook to set test datadog attributes to more accurately reflect how wrappers do it
+* kitchen yaml: datadog recipe now run as part of agent recipe (reflect this in the test rig)
+* `datadog_monitor`: Set `use_integration_template` to **true** if `cookbook` is not defined
+
 ## 3.0.0:
 
 * Run datadog as part of agent but only if there are attributes defined
