@@ -30,6 +30,7 @@ suites:
       tags:
         Name: et_monitoring-agent-ubuntu-1404
     run_list:
+      - recipe[test_users::default]
       - recipe[et_monitoring::agent]
       - recipe[datadog_client::default]
     attributes:

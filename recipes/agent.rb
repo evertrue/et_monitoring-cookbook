@@ -25,3 +25,10 @@ group 'docker' do
   only_if { node['etc']['passwd']['docker'] }
   notifies :restart, 'service[newrelic-sysmond]'
 end
+
+# Allows the Shinken Agent to log in and list out deleted files
+sudo 'list_deleted_files' do
+  user 'shinkenagent'
+  commands ['/usr/bin/lsof -nP +L1']
+  nopasswd true
+end

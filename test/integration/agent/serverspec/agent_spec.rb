@@ -13,3 +13,15 @@ describe 'Server Monitoring' do
     it { is_expected.to be_enabled }
   end
 end
+
+describe 'Deleted files command with allowed args' do
+  describe command("sudo -u shinkenagent sh -c 'sudo -n lsof -nP +L1'") do
+    its(:exit_status) { is_expected.to eq 0 }
+  end
+end
+
+describe 'Deleted files command with non-allowed args' do
+  describe command("sudo -u shinkenagent sh -c 'sudo -n lsof -nP +L1 -b'") do
+    its(:exit_status) { is_expected.to eq 1 }
+  end
+end
