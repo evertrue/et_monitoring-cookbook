@@ -25,7 +25,7 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: agent
+  - name: default
     driver:
       tags:
         Name: et_monitoring-agent-ubuntu-1404

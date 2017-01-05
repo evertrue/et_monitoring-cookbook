@@ -25,3 +25,10 @@ describe 'Deleted files command with non-allowed args' do
     its(:exit_status) { is_expected.to eq 1 }
   end
 end
+
+describe file '/usr/local/bin/suspend-monitoring' do
+  describe '#content' do
+    subject { super().content }
+    it { is_expected.to include '10.99.5.247' }
+  end
+end
