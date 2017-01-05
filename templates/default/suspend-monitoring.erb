@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if [ -n "$1" ]; then
+  maintenance_length=$1
+else
+  maintenance_length=300
+fi
+
+TIME_NOW=$(date +%s)
+let TIME_LATER=$TIME_NOW+$maintenance_length
+
+/usr/local/bin/livestatus \
+  -h <%= @monitor_server_ip %> -p <%= @monitor_server_port %> \
+  -c SCHEDULE_HOST_SVC_DOWNTIME \
+  -a "<%= node.name %>,$TIME_NOW,$TIME_LATER,1,0,0,chef,Reboot coordinator triggered downtime"
+
+/usr/local/bin/livestatus \
+  -h <%= @monitor_server_ip %> -p <%= @monitor_server_port %> \
+  -c SCHEDULE_HOST_DOWNTIME \
+  -a "<%= node.name %>,$TIME_NOW,$TIME_LATER,1,0,0,chef,Reboot coordinator triggered downtime"

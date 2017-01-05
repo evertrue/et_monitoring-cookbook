@@ -1,0 +1,14 @@
+{
+  "id": "dev-monitor-server",
+  "chef_environment": "dev",
+  "run_list": [
+    "recipe[et_monitor_server]"
+  ],
+  "automatic": {
+    "fqdn": "dev-monitor-server.priv.evertrue.com",
+    "ipaddress": "10.99.5.247",
+    "recipes": [
+      "et_monitor_server::default"
+    ]
+  }
+}

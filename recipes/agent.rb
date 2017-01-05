@@ -32,3 +32,5 @@ sudo 'list_deleted_files' do
   commands ['/usr/bin/lsof -nP +L1']
   nopasswd true
 end
+
+include_recipe 'et_monitoring::_livestatus'
