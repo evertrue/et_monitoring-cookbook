@@ -20,15 +20,19 @@ package 'ruby2.2-dev'
 
 gem_package 'livestatus-client'
 
-template '/usr/local/bin/suspend-monitoring' do
-  variables(
-    monitor_server_ip: search(
-      :node,
-      "recipes:et_monitor_server\\:\\:default AND chef_environment:#{node.chef_environment}"
-    ).first['ipaddress'],
-    monitor_server_port: 50_000
-  )
-  mode 0o755
+if Chef::Config[:solo]
+  fail 'Chef search is required by this recipe and does not work with Chef Solo'
+else
+  template '/usr/local/bin/suspend-monitoring' do
+    variables(
+      monitor_server_ip: search(
+        :node,
+        "recipes:et_monitor_server\\:\\:default AND chef_environment:#{node.chef_environment}"
+      ).first['ipaddress'],
+      monitor_server_port: 50_000
+    )
+    mode 0o755
+  end
 end
 
 node.default['reboot_coordinator']['pre_reboot_commands']['suspend_monitoring'] =
