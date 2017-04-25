@@ -29,7 +29,10 @@ end
 # Allows the Shinken Agent to log in and list out deleted files
 sudo 'list_deleted_files' do
   user 'shinkenagent'
-  commands ['/usr/bin/lsof -nP +L1']
+  commands [
+    '/usr/bin/find /proc -ignore_readdir_race -path /proc/*/fd/* -not -path ' \
+      '/proc/self/* -mmin +720 -ls'
+  ]
   nopasswd true
 end
 
