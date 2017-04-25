@@ -4,7 +4,7 @@ maintainer_email 'devops@evertrue.com'
 license          'All rights reserved'
 description      'Installs/Configures et_monitoring'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '3.1.2'
+version          '3.1.3'
 
 issues_url 'https://github.com/evertrue/et_monitoring-cookbook/issues'
 source_url 'https://github.com/evertrue/et_monitoring-cookbook'
