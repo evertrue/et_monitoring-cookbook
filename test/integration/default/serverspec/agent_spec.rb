@@ -15,13 +15,13 @@ describe 'Server Monitoring' do
 end
 
 describe 'Deleted files command with allowed args' do
-  describe command("sudo -u shinkenagent sh -c 'sudo -n lsof -nP +L1'") do
+  describe command("sudo -u shinkenagent sh -c \"sudo -n /usr/bin/find /proc -ignore_readdir_race -path '/proc/*/fd/*' -not -path '/proc/self/*' -mmin +720 -ls\"") do
     its(:exit_status) { is_expected.to eq 0 }
   end
 end
 
 describe 'Deleted files command with non-allowed args' do
-  describe command("sudo -u shinkenagent sh -c 'sudo -n lsof -nP +L1 -b'") do
+  describe command("sudo -u shinkenagent sh -c \"sudo -n /usr/bin/find /proc -ignore_readdir_race -path '/proc/*/fd/*' -not -path '/proc/self/*' -mmin +720 -ls --blah\"") do
     its(:exit_status) { is_expected.to eq 1 }
   end
 end
