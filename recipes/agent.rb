@@ -36,4 +36,3 @@ sudo 'list_deleted_files' do
   nopasswd true
 end
 
-include_recipe 'et_monitoring::_livestatus'
