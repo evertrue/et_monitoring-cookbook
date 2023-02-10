@@ -1,5 +1,9 @@
 # et_monitoring CHANGELOG
 
+## 3.1.6:
+
+* Removed newrelic
+
 ## 3.0.1:
 
 * Switch to using a test cookbook to set test datadog attributes to more accurately reflect how wrappers do it
